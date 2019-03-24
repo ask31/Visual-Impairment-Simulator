@@ -1,0 +1,148 @@
+/**
+ * Main screen wrap
+ */
+.wrap {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/**
+ * Splash screen
+ */
+.splash-screen {
+    margin-top: 20%;
+    text-align: center;
+}
+
+.load-app {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.load-app:hover {
+    opacity: 1;
+}
+
+.app {
+    display: none;
+}
+
+/**
+ * After user clicks to view the app.
+ */
+.in-app .splash-screen {
+    animation-duration: 0.5s;
+    animation-name: slideup;
+    margin-top: 0;
+}
+
+.in-app .hide-in-app {
+    display: none;
+}
+
+.in-app .app {
+    display: block;
+}
+
+@keyframes slideup {
+    from {
+        margin-top: 20%;
+    }
+
+    to {
+        margin-top: 0;
+    }
+}
+
+/**
+ * The image area
+ */
+canvas {
+    max-width: 100%;
+    margin: auto;
+}
+
+/**
+ * 3 column layout
+ */
+.col-3 {
+    margin: 10px 0;
+    width: 33.333%;
+    max-width: 33.333%;
+    float: left;
+}
+
+.col-3 >* {
+    margin-right: 5px;
+}
+
+.col-3:last-child >* {
+    margin-right: 0;
+}
+
+/* Switch 3-col to single column layout on mobile */
+@media only screen and ( max-width: 600px ) {
+    .col-3 {
+        width: 100%;
+        max-width: 100%;
+        clear: both;
+    }
+}
+
+/*
+ * Buttons and lists
+ */
+.upload-button-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+    clear: right;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.button, ul.impairment-select li {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+ul.impairment-select li:hover, .upload-button-wrapper:hover .button {
+    color: black;
+    border-color: black;
+}
+
+.upload-button-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+ul.impairment-select {
+    list-style: none;
+    padding: 0;
+}
+
+ul.impairment-select.reset {
+    clear: both;
+    margin: 10px auto;
+}
+
+.impairment-select-heading {
+    text-align: center;
+    display: block;
+}
