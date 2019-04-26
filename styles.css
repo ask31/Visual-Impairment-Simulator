@@ -4,6 +4,7 @@
 .wrap {
     max-width: 1200px;
     margin: auto;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 /**
@@ -12,6 +13,10 @@
 .splash-screen {
     margin-top: 20%;
     text-align: center;
+
+}
+.splash-screen h1{
+    font-size: 65px;
 }
 
 .load-app {
