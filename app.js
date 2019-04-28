@@ -35,6 +35,9 @@ class VisualImpairmentSimulator {
         jQuery('.impairment-select li').click((e) => {
             // Trigger the callback.
             this.onImpairmentSelect(e.target);
+
+            jQuery('.impairment-select li.active').removeClass('active');
+            jQuery(e.target).addClass('active');
         });
 
         // When the user sets a new image on the file upload handler, trigger onImageSelect.
