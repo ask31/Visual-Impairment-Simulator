@@ -2,9 +2,10 @@
  * Main screen wrap
  */
 .wrap {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
     font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-image: linear-gradient(to bottom right, lightblue, white);
 }
 
 /**
@@ -13,7 +14,6 @@
 .splash-screen {
     margin-top: 20%;
     text-align: center;
-
 }
 .splash-screen h1{
     font-size: 65px;
@@ -128,6 +128,11 @@ ul.impairment-select li:hover, .upload-button-wrapper:hover .button {
     border-color: black;
 }
 
+ul.impairment-select li.active {
+    background-image: linear-gradient(90deg, lightblue, whitesmoke);
+    color: midnightblue;
+}
+
 .upload-button-wrapper input[type=file] {
     font-size: 100px;
     position: absolute;
@@ -148,6 +153,8 @@ ul.impairment-select.reset {
 }
 
 .impairment-select-heading {
+    font-weight: bold;
+    font-size: large;
     text-align: center;
     display: block;
 }
